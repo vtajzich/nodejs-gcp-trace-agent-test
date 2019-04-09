@@ -20,11 +20,11 @@ app.post('/', async (req, res) => {
 
     try {
 
-        logger.info(`Received request`);
+        logger.info(`1. Received request`);
 
         const names = await service.getNames();
 
-        logger.info(`Got names, sending response`);
+        logger.info('5. Got names, sending response');
 
         res.status(200)
             .send(names.join('\n'))

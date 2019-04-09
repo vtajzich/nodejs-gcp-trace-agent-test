@@ -7,15 +7,15 @@ export class NameService {
 
     async getNames(): Promise<[string]> {
 
-        logger.info(`Going to get names...`);
+        logger.info(`2. Going to get names...`);
 
         const {body} = await got(DISCOVERY_URL, {json: true});
 
-        logger.info(`Names got, mapping ... `);
+        logger.info(`3. Names got, mapping ... `);
 
         const names = body.items.map((item: any) => item.name);
 
-        logger.info(`Returning names...`);
+        logger.info(`4. Returning names...`);
 
         return names;
     }
